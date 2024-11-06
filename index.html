@@ -4,14 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ECharts Example</title>
-  <!-- Include ECharts from a CDN for convenience -->
+  <!-- Include ECharts from a CDN -->
   <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
 </head>
 <body>
-  <!-- Prepare a DOM with a defined width and height for ECharts -->
-  <div id="main" style="width: 600px; height: 400px;"></div>
+  <!-- Chart container with background color for visibility testing -->
+  <div id="main" style="width: 600px; height: 400px; background-color: #f0f0f0;"></div>
 
   <script type="text/javascript">
+    // Check if ECharts is loaded
+    if (typeof echarts === 'undefined') {
+      console.error("ECharts did not load");
+    } else {
+      console.log("ECharts loaded successfully");
+    }
+
     // Initialize the echarts instance based on the prepared DOM
     var myChart = echarts.init(document.getElementById('main'));
 
@@ -38,4 +45,7 @@
     };
 
     // Display the chart using the configuration items and data just specified.
-   
+    myChart.setOption(option);
+  </script>
+</body>
+</html>
