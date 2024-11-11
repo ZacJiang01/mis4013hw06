@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <h1>Highcharts</h1>
   <title>Highcharts Area Chart</title>
   <script src="https://code.highcharts.com/highcharts.js"></script>
 </head>
