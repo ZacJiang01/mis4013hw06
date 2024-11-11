@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chart.js Example</title>
+  <title>Chart.js Line Chart</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <canvas id="chartjs-chart" width="400" height="200"></canvas>
+  <canvas id="chartjs-line" width="600" height="400"></canvas>
   <script>
-    const ctx = document.getElementById('chartjs-chart').getContext('2d');
+    const ctx = document.getElementById('chartjs-line').getContext('2d');
     const chart = new Chart(ctx, {
-      type: 'bar',
+      type: 'line',
       data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
         datasets: [{
-          label: 'Votes',
-          data: [12, 19, 3, 5, 2, 3],
-          backgroundColor: 'rgba(75, 192, 192, 0.6)',
+          label: 'Sales ($)',
+          data: [1200, 1500, 1000, 2000, 2500, 2100],
           borderColor: 'rgba(75, 192, 192, 1)',
-          borderWidth: 1
+          fill: false,
         }]
       },
       options: {
         scales: {
-          y: {
-            beginAtZero: true
-          }
+          x: { title: { display: true, text: 'Month' } },
+          y: { beginAtZero: true, title: { display: true, text: 'Sales in $' } }
         }
       }
     });
