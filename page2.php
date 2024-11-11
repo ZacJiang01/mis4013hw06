@@ -38,4 +38,13 @@
       .attr("y", 15)
       .text("Y Value");
 
-    svg.se
+    svg.selectAll("circle")
+      .data(data)
+      .enter().append("circle")
+      .attr("cx", d => x(d.x))
+      .attr("cy", d => y(d.y))
+      .attr("r", 5)
+      .attr("fill", "steelblue");
+  </script>
+</body>
+</html>
