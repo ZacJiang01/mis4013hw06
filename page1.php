@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <h1>Chart.Js6</h1>
+  <h1>Chart.Js</h1>
   <title>Chart.js Line Chart</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
