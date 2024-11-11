@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <h1>D3.Js</h1>
   <title>D3.js Scatter Plot</title>
   <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
